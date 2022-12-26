@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @SpringBootApplication
 @RestController
 public class KeyvaultApplication implements CommandLineRunner {
-    @Value("${DBUSER3}")
+    @Value("${Testing}")
     private String connectionString ;
 
     public static void main(String[] args) {
