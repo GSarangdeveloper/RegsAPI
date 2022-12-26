@@ -19,7 +19,7 @@ public class KeyvaultApplication implements CommandLineRunner {
 
     @GetMapping("get")
     public String get() {
-        return connectionString;
+        System.out.println(String.format("\nConnection String stored in Azure Key Vault:\n%s\n",connectionString));
     }
 
     public void run(String... varl) throws Exception {
