@@ -19,7 +19,7 @@ public class KeyvaultApplication implements CommandLineRunner {
 
     @GetMapping("get")
     public String get() {
-        return "HI";
+        return connectionString;
     }
 
     public void run(String... varl) throws Exception {
