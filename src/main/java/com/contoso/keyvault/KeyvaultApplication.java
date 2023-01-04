@@ -28,7 +28,7 @@ public class KeyvaultApplication implements CommandLineRunner {
         SpringApplication.run(KeyvaultApplication.class, args);
     }
 
-    @GetMapping("get")
+
    ManagedIdentityCredential managedIdentityCredential = new ManagedIdentityCredentialBuilder()
         .clientId("9ddc86fc-8e88-4f59-b266-798d8dc9d50e") // only required for user assigned
         .build();
@@ -42,7 +42,7 @@ public class KeyvaultApplication implements CommandLineRunner {
 
         KeyVaultSecret retrievedSecret = client.getSecret("Testing");
         return retrievedSecret.getValue();
-    }
+    
 
     public void run(String... varl) throws Exception {
         System.out.println(String.format("\nConnection String stored in Azure Key Vault:\n%s\n",connectionString));
